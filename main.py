@@ -4,5 +4,9 @@ from table_gerenation import gerar_planilha
 
 
 text, filename = processar_pasta("input/")
-processed_text = process_text(text)
-gerar_planilha(processed_text, f"output/{filename.replace('.pdf', '.xlsx')}")
+
+if text is None or filename is None:
+    print("Nenhum PDF processado.")
+else:
+    processed_text = process_text(text)
+    gerar_planilha(processed_text, f"output/{filename.replace('.pdf', '.xlsx')}")

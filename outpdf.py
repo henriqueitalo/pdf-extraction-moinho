@@ -9,7 +9,7 @@ def processar_pasta(pasta):
 
     if not arquivos_pdf:
         print("Nenhum PDF encontrado na pasta.")
-        return
+        return None, None
 
     print(f"Encontrados {len(arquivos_pdf)} arquivo(s) PDF.\n")
 
