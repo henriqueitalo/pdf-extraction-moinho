@@ -22,7 +22,7 @@ def linha_para_lista(id_registro, texto_linha):
     profundidade = partes[2]
     valores = partes[3:]
 
-    # Caso especifico presente  no exemplo, onde o não ha um valor informado.
+    # Caso especifico presente  no exemplo, onde não ha um valor informado.
     if len(valores) == QTD_VALORES - 1:
         valores = valores + ["-"]
 
@@ -38,9 +38,6 @@ def linha_para_lista(id_registro, texto_linha):
 
 
 def gerar_planilha(dados, caminho_saida):
-
-    os.makedirs("output/", exist_ok=True)
-
     linhas = []
     for registro in dados:
         for id_registro, texto_linha in registro.items():

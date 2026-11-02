@@ -4,6 +4,7 @@ import pdfplumber
 
 def processar_pasta(pasta):
     os.makedirs(pasta, exist_ok=True)
+    os.makedirs("output/", exist_ok=True)
     arquivos_pdf = glob.glob(os.path.join(pasta, "*.pdf"))
 
     if not arquivos_pdf:
